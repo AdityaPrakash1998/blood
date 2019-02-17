@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Contact
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>Follow us on Twitter</ion-list-header>
+    <ion-item>
+      <ion-icon name="ionic" item-start></ion-icon>
+      {{info.name}}
+    </ion-item>
+    <ion-item>
+      Address: {{info.address}}
+    </ion-item>
+    <ion-item>
+      BMI: {{info.bmi}}
+    </ion-item>
+    <ion-item>
+      Registered Number: {{info.number}}
+    </ion-item>
+    <ion-item *ngIf="info.donor">
+      Pledged as a donor
+    </ion-item>
+    <ion-item *ngIf="!info.donor">
+      Not pledged as a donor Yet. <a>Do NOW</a>
+    </ion-item>
+  </ion-list>
+  <button ion-button (click)="update()"> Update Profile </button>
+  <button ion-button (click)="logout()">LogOut</button>
+</ion-content>

@@ -1,0 +1,33 @@
+<!--
+  Generated template for the RequestInfoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>requestInfo</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div *ngIf="!receiver">
+    <h5>Contact Number: {{info.number}}</h5>
+    <h5>Contact Email: {{info.email}}</h5>
+    <h5>Name: {{info.centerName}}</h5>
+    <h5>Opening Time: {{info.openingTime}}</h5>
+    <h5>Closing Time: {{info.closingTime}}</h5>
+    <h5>Center Address: {{info.centerAddress}}</h5>
+    <ion-list *ngFor="let g of info.inventory">
+      <h6>{{g.bloodGroup}} -> {{g.quantity}}</h6>
+    </ion-list>
+  </div>
+
+  <div *ngIf="receiver">
+    <h5>Contact Number: {{info.number}}</h5>
+    <h5>Contact Email: {{info.email}}</h5>
+    <h5>Name: {{info.name}}</h5>
+    <h5>BMI: {{info.bmi}}</h5>
+    <h5>Blood Group: {{info.bloodGroup}}</h5>
+  </div>
+</ion-content>

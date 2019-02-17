@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Request History
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button (click)="req('sent')">Sent</button><button ion-button (click)="req('received')">Received</button><button ion-button (click)="req('done')">Completed</button>
+  <ion-list>
+    <ion-item *ngFor="let request of requests">
+      <div (click)="elocs(request.eLoc)" *ngIf="request.eLoc">
+        <div class="sent">Your Request ID : {{request._id}}</div>
+        <div class="sent">Center ID : {{request._id}}</div>
+        <div class="sent">Number of Units {{request.bloodUnits}}</div>
+        <div class="sent">Time {{request.time}}</div>
+        <div class="sent">Deadline {{request.deadline}}</div>
+      </div>
+      <div (click)="receiver(request.receiverId)" *ngIf="request.receiverId">
+        <div class="sent">Your Request ID : {{request._id}}</div>
+        <div class="sent">Receiver's ID : {{request.receiverId}}</div>
+        <div class="sent">Number of Units {{request.bloodUnits}}</div>
+        <div class="sent">Time {{request.time}}</div>
+        <div class="sent">Deadline {{request.deadline}}</div>
+        <button ion-button (click)="accept(request._id)" *ngIf="typeOfReq">Accept</button>
+        <button ion-button (click)="reject(request._id)" *ngIf="typeOfReq">Reject</button>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>

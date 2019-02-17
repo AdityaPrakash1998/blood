@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6"><button ion-button (click)="pushList()">Request</button></ion-col>
+      <ion-col size="6"><button ion-button (click)="history()">Donate</button></ion-col>
+    </ion-row>
+    <hr>
+    <ion-row *ngFor="let event of Events">
+      <ion-col>
+        <p>{{event.name}}</p>
+        <p>{{event.des}}</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <button ion-button id="float-button" (click)="presentActionSheet()">+</button>
+</ion-content>

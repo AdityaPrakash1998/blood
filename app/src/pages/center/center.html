@@ -1,0 +1,23 @@
+<!--
+  Generated template for the CenterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>centerPage</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="card">{{name}} <br> {{address}} <br></div>
+  <ion-list>
+    <ion-item *ngFor="let entry of invent" style="border:1px solid #999">
+      {{entry.bloodGroup}} -> {{entry.quantity}}
+    </ion-item>
+  </ion-list>
+  <button ion-button (click)="setUpdate()">Update Inventory</button>
+  <button ion-button (click)="logout()" end>LogOut</button>
+  <!-- <div *ngIf="info.centerName">{{info.centerName}}</div> -->
+</ion-content>

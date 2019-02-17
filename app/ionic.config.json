@@ -1,0 +1,7 @@
+{
+  "name": "Blood",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
