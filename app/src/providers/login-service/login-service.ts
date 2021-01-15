@@ -15,12 +15,12 @@ export class LoginServiceProvider {
     console.log('Hello LoginServiceProvider Provider');
   }
   loginAsUser(email: string, password: string) {
-    var url = 'https://03af7f6c.ngrok.io/api/user/login'
+    var url = 'https://19ee4cec.ngrok.io/api/user/login'
 
     return this.http.post(url, { email: email, password: password })
   }
   loginAsCenter(email: string, password: string) {
-    var url = 'https://03af7f6c.ngrok.io/api/center/login'
+    var url = 'https://19ee4cec.ngrok.io/api/center/login'
 
     return this.http.post(url, { email: email, password: password })
   }

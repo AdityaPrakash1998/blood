@@ -29,7 +29,7 @@ export class CenterPage {
   ionViewDidLoad() {
     var self = this;
     this.storage.get('idCenter').then(val => {
-      this.http.get(`https://03af7f6c.ngrok.io/api/center/bloodBank/${val}`).subscribe(data => {
+      this.http.get(`https://19ee4cec.ngrok.io/api/center/bloodBank/${val}`).subscribe(data => {
         self.info = data;
         self.name = data.centerName;
         self.address = data.centerAddress;
@@ -137,7 +137,7 @@ export class CenterPage {
               "quantity": data["O Negative"]
             }]
 
-            this.http.post(`https://03af7f6c.ngrok.io/api/center/updateInventory`, { eLoc: self.info.eLoc, inventory: object }, { headers: { 'Content-Type': 'application/json' } })
+            this.http.post(`https://19ee4cec.ngrok.io/api/center/updateInventory`, { eLoc: self.info.eLoc, inventory: object }, { headers: { 'Content-Type': 'application/json' } })
               .subscribe(data => { self.invent = data.inventory; console.log(data) }, err => console.log(err));
           }
         }

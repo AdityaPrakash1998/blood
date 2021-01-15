@@ -22,7 +22,7 @@ export class ContactPage {
   ionViewWillLoad() {
     var self = this;
     this.storage.get('id').then(val => {
-      this.http.get(`https://03af7f6c.ngrok.io/api/user/${val}`).subscribe(data => {
+      this.http.get(`https://19ee4cec.ngrok.io/api/user/${val}`).subscribe(data => {
         console.log(data);
         self.info = data;
       }, err => console.log(err))

@@ -40,7 +40,7 @@ export class CenterInfoPage {
   sendRequest() {
     var self = this;
     this.storage.get('id').then((val) => {
-      this.http.post(`http://03af7f6c.ngrok.io/api/request/center/create/${this.profile.eLoc}`, {
+      this.http.post(`http://19ee4cec.ngrok.io/api/request/center/create/${this.profile.eLoc}`, {
         "senderId": val, "bloodGroup": `${this.bloodGroup}`, "bloodUnits": `${this.units}`, "deadline": `${this.deadline}`
       }, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } })
         .subscribe((data) => {

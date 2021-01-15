@@ -71,7 +71,7 @@ export class UserInfoPage {
           text: 'Save',
           handler: data => {
             this.storage.get('id').then(val => {
-              this.http.post(`https://03af7f6c.ngrok.io/api/request/user/create/${this.currentUser.userId}`, { "senderId": val, "bloodGroup": this.currentUser.bloodGroup, "deadline": data.deadline, "bloodUnits": data.unit, "number": this.currentUser.number }, { headers: { 'Content-Type': 'application/json' } })
+              this.http.post(`https://19ee4cec.ngrok.io/api/request/user/create/${this.currentUser.userId}`, { "senderId": val, "bloodGroup": this.currentUser.bloodGroup, "deadline": data.deadline, "bloodUnits": data.unit, "number": this.currentUser.number }, { headers: { 'Content-Type': 'application/json' } })
                 .subscribe(data => {
                   console.log(data);
                   self.localNotifications.schedule({
