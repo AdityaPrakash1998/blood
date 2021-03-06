@@ -1,4 +1,4 @@
-# blood
+# Blood
 
 ## An Ionic JS based mobile application to get the locate blood bank.
 ## Includes request portal for specific blood type to be donated
